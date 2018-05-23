@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7ed5ad2e3b7946b0b1dd21a9e2f6df41" Name="Diagram1">
+        <EntityTypeShape EntityType="DigitalXDBModel.Address" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.AddressType" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Contact" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.ContactType" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Customer" Width="1.5" PointX="5.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Employee" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Invoiced" Width="1.5" PointX="12.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Order" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.OrderDetail" Width="1.5" PointX="15.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Product" Width="1.5" PointX="13.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.ProductCategory" Width="1.5" PointX="9" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.ProductSubCategory" Width="1.5" PointX="11.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Retailer" Width="1.5" PointX="11.25" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Role" Width="1.5" PointX="10.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.Shipper" Width="1.5" PointX="8.25" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.ShipperOption" Width="1.5" PointX="10.5" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.ShippingLocation" Width="1.5" PointX="8.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.ShippingMethod" Width="1.5" PointX="8.25" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.sysdiagram" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.WishList" Width="1.5" PointX="7.5" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DigitalXDBModel.WishListItem" Width="1.5" PointX="9.75" PointY="12.625" IsExpanded="true" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Address_AddressType" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Order_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Contact_ContactType" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_WishList_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Invoiced_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_OrderDetail_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Invoiced_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Invoiced_ShipperOptions" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_OrderDetail_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_OrderDetail_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Product_ProductSubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_Product_Retailer" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_ProductSubCategory_ProductCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_ShipperOptions_Shipper" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_ShipperOptions_ShippingLocation" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_ShipperOptions_ShippingMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.FK_WishListItems_WishList" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.CustomerAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.CustomerContact" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.EmployeeAddress" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.EmployeeContact" ManuallyRouted="false" />
+        <AssociationConnector Association="DigitalXDBModel.EmployeeRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

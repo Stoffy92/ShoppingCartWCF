@@ -1,0 +1,12 @@
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\ShoppingCartWCF.dll.config
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\ShoppingCartWCF.dll
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\ShoppingCartWCF.pdb
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\EntityFramework.dll
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\EntityFramework.SqlServer.dll
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\EntityFramework.xml
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\bin\EntityFramework.SqlServer.xml
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\obj\Debug\ShoppingCartWCF.csprojResolveAssemblyReference.cache
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\obj\Debug\ShoppingCartWCF.csproj.CoreCompileInputs.cache
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\obj\Debug\ShoppingCartWCF.csproj.CopyComplete
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\obj\Debug\ShoppingCartWCF.dll
+C:\Users\invrt\source\repos\ShoppingCartWCF\ShoppingCartWCF\obj\Debug\ShoppingCartWCF.pdb

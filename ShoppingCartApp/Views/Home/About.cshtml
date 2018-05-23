@@ -1,0 +1,55 @@
+﻿@model IEnumerable<ShoppingCartApp.ServiceReference1.Product>
+@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+<<div>
+     <table class="table">
+         <tr>
+             <th>
+                 <h3> @Html.DisplayNameFor(model => model.ProductName)</h3>
+             </th>
+             <th>
+                 @Html.DisplayNameFor(model => model.Price)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(model => model.Picture)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(model => model.ProductDescription)
+             </th>
+             <th>
+                 @Html.DisplayNameFor(model => model.UnitsInStock)
+             </th>
+         </tr>
+
+
+         @foreach (var item in Model) // Couldn't get this to work
+    {
+     <tr>
+         <td>
+             @Html.DisplayFor(modelItem => item.ProductName)
+         </td>
+         <td>
+             @Html.DisplayFor(modelItem => item.Price)
+         </td>
+         <td>
+             @{
+            var img = "data:image/jpg;base64," + Convert.ToBase64String((byte[])item.Picture); // Fetches IMG from Database
+
+             }
+             <img src='@img' style="max-width:100px; max-height:100px;" />
+         </td>
+         <td>
+             @Html.ActionLink("Details", "About", new { id = item.ProductID })
+         </td>
+         <td align="center">@Html.ActionLink("Add to Cart", "AddToCart", "ShoppingCart", new { id = item.ProductID }, null)</td>
+     </tr>
+}
+
+     </table>
+</div>

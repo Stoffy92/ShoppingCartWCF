@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ShoppingCartApp.ServiceReference1.Product>
+@{
+    ViewBag.Title = "Console";
+}
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan" rel="stylesheet">
+
+<div id="headerTop">
+    <h2>Welcome to DigitalX</h2>
+    <h3>Latest and Greatest Consoles!</h3>
+</div>
+<br />
+
+<div>
+    <table class="table">
+        <tr hidden="hidden">
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                <h3><em>@Html.DisplayFor(modelItem => item.ProductName)</em></h3>
+                @Html.DisplayFor(modelItem => item.ProductDescription)
+            </td>
+            <td>
+                <br />
+                <br />
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @{
+            var img = "data:image/jpg;base64," + Convert.ToBase64String((byte[])item.Picture); // Fetches IMG from Database
+
+                }
+                <img src='@img' style="max-width:100px; max-height:100px;" />
+            </td>
+            <td align="center">
+                <br />
+                <br />
+                @Html.ActionLink("Add to Cart", "AddToCart", "ShoppingCart", new { id = item.ProductID }, null)
+            </td>
+            <td>
+                <br />
+                <br />
+                @Html.ActionLink("Details", "About", new { id = item.ProductID })
+            </td>
+        </tr>
+        }
+
+    </table>
+</div>

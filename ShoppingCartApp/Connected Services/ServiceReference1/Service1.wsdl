@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50517/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50517/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50517/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ShoppingCartWCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetDvds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDvds" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDvds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDvdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTopProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopProducts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetTopProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetComponents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComponents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetComponents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComponentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetGames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGames" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetGames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHandbooks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandbooks" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHandbooks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandbooksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPcParts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPcParts" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetPcParts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPcPartsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetConsoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsoles" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetConsoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConsolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProduct" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrderDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetail" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOrderDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetDvds">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDvds" message="tns:IService1_GetDvds_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDvdsResponse" message="tns:IService1_GetDvds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopProducts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetTopProducts" message="tns:IService1_GetTopProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetTopProductsResponse" message="tns:IService1_GetTopProducts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComponents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetComponents" message="tns:IService1_GetComponents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetComponentsResponse" message="tns:IService1_GetComponents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetGames" message="tns:IService1_GetGames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetGamesResponse" message="tns:IService1_GetGames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandbooks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetHandbooks" message="tns:IService1_GetHandbooks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetHandbooksResponse" message="tns:IService1_GetHandbooks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPcParts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPcParts" message="tns:IService1_GetPcParts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPcPartsResponse" message="tns:IService1_GetPcParts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConsoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetConsoles" message="tns:IService1_GetConsoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetConsolesResponse" message="tns:IService1_GetConsoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetProduct" message="tns:IService1_GetProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetProductResponse" message="tns:IService1_GetProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOrderDetail" message="tns:IService1_GetOrderDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOrderDetailResponse" message="tns:IService1_GetOrderDetail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDvds">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDvds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopProducts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetTopProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComponents">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetComponents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandbooks">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetHandbooks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPcParts">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetPcParts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetConsoles">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetConsoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProduct">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetail">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOrderDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:50517/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

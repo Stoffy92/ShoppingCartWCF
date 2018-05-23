@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "ShoppingCart";
+}
+@using ShoppingCartApp.Controllers
+<h2>ShoppingCart</h2>
+
+
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Product
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+        </tr>
+       
+        @foreach (CartItem cartItem in (List<CartItem>)Session["shoppingCart"]) // Couldn't fix this error
+        {
+            
+        <tr>
+
+            <td>
+                @cartItem.Product.ProductID
+            </td>System.InvalidCastException
+            <td>
+                @cartItem.Product.ProductName
+            </td>
+            <td>
+                @(cartItem.Product.Price * @cartItem.Quantity)
+            </td>
+            <td>
+                @cartItem.Quantity
+            </td>
+
+            <td>@Html.ActionLink("RemoveFromCart", "RemoveFromCart", "ShoppingCart", new { id = cartItem.Product.ProductID }, null)</td>
+        </tr>
+
+
+        }
+        <tr>
+            <td>Total Cost:</td>
+            
+        </tr>
+
+    </table>
+    <br />
+    <br />
+    @Html.ActionLink("Continue Shopping", "Index", "Home")
+    <br />
+    <br />
+    @Html.ActionLink("Checkout", "Checkout", "ShoppingCart")
+</div>

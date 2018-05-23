@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ShoppingCartApp.ServiceReference1.OrderDetail>
+@{
+    ViewBag.Title = "Checkout";
+}
+
+<h2>Checkout</h2>
+
+@if (Request.IsAuthenticated)
+{
+    <div>
+        <h4>ORDER STATUS:</h4>
+        <table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.OrderID</td>
+                    <td>@item.ProductID</td>
+                    <td>@item.PackagedBy</td>
+                    <td>@item.Order</td>
+                    <td>@item.Packaged</td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+else
+{
+    @Html.ActionLink("Please Log in before checkout", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+}
